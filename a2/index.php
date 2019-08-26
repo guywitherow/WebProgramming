@@ -15,22 +15,36 @@
   <body>
 
     <header>
-      <div id="title"><img id="logo" src="../../media/lunardo_logo.png" alt="Logo of Lunardo Cinema">Lunardo</div>
+      <div>
+        <img id="logo" src="../../media/lunardo_logo_no_text.png" alt="Logo of Lunardo Cinema">
+        <span id="title">Lunardo</span>
+      </div>
     </header>
 
     <nav>
       <ul class="navList">
-        <a href="#aboutUs"><li class="navItem">Now Showing</li></a>
-        <li class="navItem">Prices</li>
-        <li class="navItem">About Us</li>
+        <li class="navItem"><a href="#aboutUs">About Us</a></li>
+        <li class="navItem"><a href="#prices">Prices</a></li>
+        <li class="navItem"><a href="#nowShowing">Now Showing</a></li>
+
       </ul>
     </nav>
 
     <main>
-      <article id='Website Under Construction'>
-          <!-- Creative Commons image sourced from https://pixabay.com/en/maintenance-under-construction-2422173/ and used for educational purposes only -->
-          <!-- <img src='../../media/website-under-construction.png' alt='Website Under Construction' /> -->
-        </article>
+      <article class="article" id="aboutUs">
+        <h1>About Us</h1>
+
+      </article>
+
+      <article class="article" id="prices">
+        <h1>Prices</h1>
+
+      </article>
+
+      <article class="article" id="nowShowing">
+        <h1>Now Showing</h1>
+        
+      </article>
     </main>
 
     <footer>
