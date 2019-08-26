@@ -15,7 +15,7 @@
   <body>
 
     <header>
-      <div id="tital"><img id="logo" src="../../media/moviehouse.png" alt="Logo of Lunardo Cinema">Lunardo</div>
+      <div id="title"><img id="logo" src="../../media/moviehouse.png" alt="Logo of Lunardo Cinema">Lunardo</div>
     </header>
 
     <nav>
