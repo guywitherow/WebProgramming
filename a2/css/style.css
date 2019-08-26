@@ -1,15 +1,38 @@
 /* Insert your styles here */
+
+/*colours:
+#1a1a1d = background
+#4e4e50 = text (general)
+#6f2232 = lowlight
+#950740 = medium
+#c3073f = highlight
+
+*/
+
+* {
+  color: #4e4e50;
+}
+
 .navList {
   float: left;
   width: 100%;
   height: 20px;
 }
 .navItem {
+  font-size: 20px;
   float: left;
   width: 30%;
   text-align: center;
   padding-right: 10px;
+  transition:.5s;
+  margin: 10px 0 10px 0;
+  border-radius: 5px;
 }
+.navItem:hover {
+  background-color: #950740;
+  color: #000;
+}
+
 header {
   width: 100%;
   font-family: 'Righteous', cursive;
@@ -18,8 +41,8 @@ header {
 
 body {
   font-family: 'Lato', sans-serif;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 100px 0 100px;
+  background-color: #1a1a1d;
 }
 
 ul {
@@ -33,7 +56,7 @@ ul {
 }
 #title {
   text-align: right;
-  padding-right: 200px;
+  color: #c3073f;
 }
 
 footer {

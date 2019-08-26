@@ -6,8 +6,8 @@
     <title>Assignment 2</title>
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
-    <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
+    <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link href="https://fonts.googleapis.com/css?family=Lato|Righteous&display=swap" rel="stylesheet">
     <script src='../wireframe.js'></script>
   </head>
@@ -15,14 +15,14 @@
   <body>
 
     <header>
-      <div id="title"><img id="logo" src="../../media/moviehouse.png" alt="Logo of Lunardo Cinema">Lunardo</div>
+      <div id="title"><img id="logo" src="../../media/lunardo_logo.png" alt="Logo of Lunardo Cinema">Lunardo</div>
     </header>
 
     <nav>
       <ul class="navList">
-        <li class="navItem">a</li>
-        <li class="navItem">b</li>
-        <li class="navItem">c</li>
+        <a href="#aboutUs"><li class="navItem">Now Showing</li></a>
+        <li class="navItem">Prices</li>
+        <li class="navItem">About Us</li>
       </ul>
     </nav>
 
