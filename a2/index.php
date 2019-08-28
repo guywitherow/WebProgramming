@@ -22,7 +22,7 @@
     </header>
 
     <nav>
-      <ul class="navList">
+      <ulss="navList">
         <li class="navItem"><a href="#aboutUs">About Us</a></li>
         <li class="navItem"><a href="#prices">Prices</a></li>
         <li class="navItem"><a href="#nowShowing">Now Showing</a></li>
@@ -33,32 +33,43 @@
     <main>
       <article class="article" id="aboutUs">
         <h1>About Us</h1>
-        <div class="sub_article_left">
-          <h2>Grand Re-opening!</h2>
-        </div>
-        <div class="sub_article_right">
-          <h2>New Seating</h2>
-          <img src="../../media/standardSeat.png">
-          <img src="../../media/firstClassSeat.png">
-        </div>
-        <div class="sub_article_left">
+        <div>
           <h2>An Experience Re-imagined</h2>
-          The cinema has had its audio and visual replaced, and we now sport Dolby sound and visual.
+        </div>
+        <div>
+          <div class="imageDiv">
+            <div class="imageHalf">
+              <img src="../../media/standardSeat.png" class="seatImage imageCentre">
+              <h3>Standard Seating</h3>
+              <p>The new standard seating sports luxurious cushioning, as well as adjustable armrests with cupholders!
+            </div>
+            <div class="imageHalf">
+              <img src="../../media/firstClassSeat.png" class="seatImage imageCentre">
+              <h3>First Class Seating</h3>
+              <p>The new standard seating sports luxurious cushioning, as well as adjustable armrests with cupholders!
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="sub_article">
+          <h3>Revamped Sound and Visuals</h3>
 
           <div class="inlineContainer">
             <div class="inline inlineLeft">
-              <img id="dolbyAtmos" src="../../media/atmos.png">
+              <img id="dolbyAtmos" class="imageCentre" src="../../media/atmos.png">
             </div>
             <div class="inline inlineRight">
               <ul class="dolbyFactList">
                 <li class="dolbyFact">
-                  <h3>All sides covered</h3>
+                  <h4>All sides covered</h4>
                   <p>
                     The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
                   </p>
                 </li>
                 <li class="dolbyFact">
-                  <h3>All sides covered</h3>
+                  <h4>All sides covered</h4>
                   <p>
                     The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
                   </p>
@@ -66,13 +77,13 @@
               </ul>
               <ul class="dolbyFactList">
                 <li class="dolbyFact">
-                  <h3>All sides covered</h3>
+                  <h4>All sides covered</h4>
                   <p>
                     The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
                   </p>
                 </li>
                 <li class="dolbyFact">
-                  <h3>All sides covered</h3>
+                  <h4>All sides covered</h4>
                   <p>
                     The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
                   </p>
@@ -83,18 +94,18 @@
 
           <div class="inlineContainer dolbyBorder">
             <div class="inline inlineLeft">
-              <img id="dolbyAtmos" src="../../media/vision.png">
+              <img id="dolbyAtmos" class="imageCentre" src="../../media/vision.png">
             </div>
             <div class="inline inlineRight">
               <ul class="dolbyFactList">
                 <li class="dolbyFact">
-                  <h3>All sides covered</h3>
+                  <h4>All sides covered</h4>
                   <p>
                     The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
                   </p>
                 </li>
                 <li class="dolbyFact">
-                  <h3>All sides covered</h3>
+                  <h4>All sides covered</h4>
                   <p>
                     The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
                   </p>
@@ -102,13 +113,13 @@
               </ul>
               <ul class="dolbyFactList">
                 <li class="dolbyFact">
-                  <h3>All sides covered</h3>
+                  <h4>All sides covered</h4>
                   <p>
                     The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
                   </p>
                 </li>
                 <li class="dolbyFact">
-                  <h3>All sides covered</h3>
+                  <h4>All sides covered</h4>
                   <p>
                     The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
                   </p>
@@ -143,17 +154,17 @@
             <p> Standard: $15.30
             <p> Special: $11.00
           </div>
-          <div class="gold1 gold">
+          <div class="first1 first">
             First Class Adult:
             <p> Standard: $30.00
             <p> Special: $24.00
           </div>
-          <div class="gold2 gold">
+          <div class="first2 first">
             First Class Concession:
             <p> Standard: $27.00
             <p> Special: $22.50
           </div>
-          <div class="gold3 gold">
+          <div class="first3 first">
             First Class Child:
             <p> Standard: $24.00
             <p> Special: $21.00

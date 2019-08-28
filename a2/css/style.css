@@ -14,11 +14,24 @@
   color: #fff;
 }
 
+h2 {
+  color: #950740;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #6f2232;
+}
+
 nav {
   position: sticky;
   overflow: hidden;
   top: 0px;
   width: 100%;
+}
+
+.sub_article {
+  padding-top: 30px;
 }
 
 .navList {
@@ -102,13 +115,13 @@ padding: 0 100px 0 100px;
 .std3 {
   grid-area: 3 / 3 / 4 / 4;
 }
-.gold1 {
+.first1 {
   grid-area: 4 / 1 / 5 / 2;
 }
-.gold2 {
+.first2 {
   grid-area: 4 / 2 / 5 / 3;
 }
-.gold3 {
+.first3 {
   grid-area: 4 / 3 / 5 / 4;
 }
 
@@ -117,9 +130,21 @@ padding: 0 100px 0 100px;
   padding: 5px 5px 5px 5px;
 }
 
-.gold {
+.first {
   background-color: #c3073f;
   padding: 5px 5px 5px 5px;
+}
+
+.seatImage {
+  height: 20vh;
+  display: block;
+  vertical-align: middle;
+}
+
+.imageHalf {
+  width: 49%;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .article {
@@ -148,7 +173,7 @@ padding: 0 100px 0 100px;
   text-align: center;
 }
 
-.inlineLeft img {
+.imageCentre {
   margin-left: auto;
   margin-right: auto;
   display: block;
