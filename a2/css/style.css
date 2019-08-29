@@ -12,26 +12,54 @@
 
 * {
   color: #fff;
+  box-sizing: border-box;
+}
+
+button {
+  color: #950740;
+  background-color: #1a1a1d;
+  border: 1px solid #4e4e50;
+  margin-left: 3px;
+  font-size: 1em;
 }
 
 h2 {
-  color: #950740;
+  color: #c3073f;
 }
 
 h3 {
   font-size: 1.5em;
-  color: #6f2232;
+  color: #c3073f;
 }
 
 nav {
   position: sticky;
   overflow: hidden;
   top: 0px;
-  width: 100%;
+  width: 93vw;
+  background-color: #1a1a1d;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-width: 320px;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  padding: 0 100px 0 100px;
+  background-color: #1a1a1d;
+  min-width: 500px;
+  overflow-x: hidden;
+}
+
+footer {
+  padding-top: 100px;
 }
 
 .sub_article {
   padding-top: 30px;
+  display: inline-block;
 }
 
 .navList {
@@ -39,6 +67,7 @@ nav {
   width: 100%;
   height: 20px;
   top: 0;
+  padding-bottom: 10px;
 }
 
 .navItem {
@@ -52,7 +81,7 @@ nav {
   border-right: 5px solid #4e4e50;
 }
 
-.navItem:last-child {
+.last {
   border-right: 0px;
 }
 
@@ -66,18 +95,14 @@ nav {
 }
 
 nav ul {
-  list-style-type: none;
+  list-style: none;
 }
 
 #logo {
-  text-align: left;
-  float:left;
   width: 200px;
 }
 
 #title {
-  padding-top: 50px;
-  float: right;
   color: #c3073f;
 }
 
@@ -85,6 +110,38 @@ header {
   width: 100%;
   font-family: 'Righteous', cursive;
   font-size: 100px;
+  display: inline-block;
+}
+
+.wide100 {
+  width: 100%;
+}
+
+@media screen and (max-width: 950px) {
+  header img {
+    margin: 0 auto;
+    display: inline-block;
+  }
+  header span {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-top: 10px;
+  }
+  header {
+    text-align: center;
+    align-content: center;
+  }
+}
+
+@media screen and (min-width: 951px) {
+  header img {
+    float: left;
+  }
+  header span {
+    float: right;
+    padding-top: 50px;
+  }
 }
 
 h1 {
@@ -94,10 +151,10 @@ h1 {
 .gridContainer {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-grid-template-rows: 70px 40px repeat(2, 200px);
+grid-template-rows: 70px 40px repeat(2, 40vh);
 grid-column-gap: 10px;
 grid-row-gap: 10px;
-padding: 0 100px 0 100px;
+padding: 0 0 0 0;
 }
 
 .title {
@@ -125,18 +182,100 @@ padding: 0 100px 0 100px;
   grid-area: 4 / 3 / 5 / 4;
 }
 
+.posterContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "avengers  tEW " "dumbo  tHP ";
+}
+
+.avengers  {
+  grid-area: avengers;
+}
+
+.tEW  {
+  grid-area: tEW;
+}
+
+.dumbo  {
+  grid-area: dumbo;
+}
+
+.tHP  {
+  grid-area: tHP;
+}
+
+.articleContainer {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.poster {
+  padding: 10px 10px 7px 10px;
+  width: 15vw;
+}
+
+.postCard {
+  box-shadow: 10px 6px #4e4e50;
+  margin: 10px 10px 10px 10px;
+  background-color: #c3073f;
+}
+
+/*colours:
+#1a1a1d = background
+#fff = text
+#4e4e50 = text (subtitle)
+#6f2232 = lowlight
+#950740 = medium
+#c3073f = highlight
+*/
+
 .standard {
   background-color: #950740;
   padding: 5px 5px 5px 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.standard h3 {
+  color: #000;
+  font-size: 2em;
+  text-decoration: underline;
 }
 
 .first {
   background-color: #c3073f;
   padding: 5px 5px 5px 5px;
+  text-align: center;
+}
+
+.first h3 {
+  color: #000;
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+.standardPrice {
+  height: 30%;
+  width: 60%;
+  background-color: #4e4e50;
+  vertical-align: middle;
+}
+
+.specialPrice {
+  height: 30%;
+  width: 60%;
+  background-color: gold;
+}
+
+.standard span {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .seatImage {
-  height: 20vh;
+  height: 40vh;
   display: block;
   vertical-align: middle;
 }
@@ -145,6 +284,7 @@ padding: 0 100px 0 100px;
   width: 49%;
   vertical-align: middle;
   display: inline-block;
+  min-width: 400px;
 }
 
 .article {
@@ -159,17 +299,25 @@ padding: 0 100px 0 100px;
 
 .inlineContainer {
   width: 90vw;
-  height: 30vh;
-  display: flex;
+  display: inline-block;
 }
 
 .inline {
-  height: 100%;
-  display: inline-flex;
+  display: inline-block;
+  float: left;
+}
+
+.factContainer {
+  display: inline-block;
+}
+
+.dolbyFooter {
+  width: 100%;
+  float: left;
 }
 
 .inlineLeft {
-  width: 20%;
+  width: 30%;
   text-align: center;
 }
 
@@ -180,19 +328,20 @@ padding: 0 100px 0 100px;
 }
 
 .inlineRight {
-  width: 70%;
+  width: auto;
 }
 
 .dolbyFactList {
-  width: 40%;
-  display: inline-block;
+  width: 50%;
+  float: left;
   padding: 0 10px 0 0;
   margin-block-start: 0;
+  min-width: 300px;
 }
 
 .dolbyFact {
   width: 20vw;
-  padding-right: 20px;
+  margin-right: 0px;
 }
 
 .dolbyBorder {
@@ -204,14 +353,4 @@ padding: 0 100px 0 100px;
   display: inline;
   align-self: center;
   vertical-align: middle;
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-  padding: 0 100px 0 100px;
-  background-color: #1a1a1d;
-}
-
-footer {
-  padding-top: 100px;
 }
