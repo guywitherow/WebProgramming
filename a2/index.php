@@ -151,13 +151,12 @@
             <div class="priceDiv">
               <div class="standardPrice priceCentre">
                 <span>
-                  Standard:
-                  <p>$19.80
+                  Standard: $19.80
                 </span>
               </div>
               <div class="specialPrice priceCentre">
-                <span>Special:
-                <p>$14.00</span>
+                <span>Special: $14.00
+                </span>
               </div>
             </div>
           </div>
@@ -165,12 +164,12 @@
             <h3>Standard Concession</h3>
             <div class="priceDiv">
               <div class="standardPrice priceCentre">
-                <span>Standard:
-                <p>$17.50</span>
+                <span>Standard: $17.50
+                </span>
               </div>
               <div class="specialPrice priceCentre">
-                <span>Special:
-                <p>$12.50</span>
+                <span>Special: $12.50
+                </span>
               </div>
             </div>
           </div>
@@ -178,12 +177,12 @@
             <h3>Standard Child</h3>
             <div class="priceDiv">
               <div class="standardPrice priceCentre">
-                <span>Standard:
-                <p>$15.30</span>
+                <span>Standard: $15.30
+                </span>
               </div>
               <div class="specialPrice priceCentre">
-                <span>Special:
-                <p>$11.00</span>
+                <span>Special: $11.00
+                </span>
               </div>
             </div>
           </div>
@@ -191,12 +190,12 @@
             <h3>First Class Adult</h3>
             <div class="priceDiv">
               <div class="standardPrice priceCentre">
-                <span>Standard:
-                <p>$30.00</span>
+                <span>Standard: $30.00
+                </span>
               </div>
               <div class="specialPrice priceCentre">
-                <span>Special:
-                <p>$24.00</span>
+                <span>Special: $24.00
+                </span>
               </div>
             </div>
           </div>
@@ -204,12 +203,13 @@
             <h3>First Class Concession</h3>
             <div class="priceDiv">
               <div class="standardPrice priceCentre">
-                <span>Standard:
-                <p>$27.00</span>
+                <span>Standard: $27.00
+                </span>
               </div>
               <div class="specialPrice priceCentre">
-                <span>Special:
-                <p>$22.50</span>
+                <span>
+                Special: $22.50
+                </span>
               </div>
             </div>
           </div>
@@ -217,12 +217,12 @@
             <h3>First Class Child</h3>
             <div class="priceDiv">
               <div class="standardPrice priceCentre">
-                <span>Standard:
-                <p>$24.00</span>
+                <span>Standard: $24.00
+                </span>
               </div>
               <div class="specialPrice priceCentre">
-                <span>Special:
-                <p>$21.00</span>
+                <span>Special: $21.00
+                </span>
               </div>
             </div>
           </div>
@@ -303,24 +303,24 @@
             </div>
           </div>
           <div class="synopsisContainer">
-            <div top>
-              <div left 1/2>
-                <div top>
+            <div class="synopsisVerticalHalf">
+              <div class="synopsisHorizontalHalf">
+                <div class="synopsisVerticalHalf">
                   Avengers: Endgame     PG
                 </div>
-                <div bottom>
+                <div class="synopsisVerticalHalf">
                   After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.
                 </div>
               </div>
-              <div right 1/2>
+              <div class="synopsisHorizontalHalf">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
-            <div bottom>
-              <div left 1/3>
+            <div class="synopsisVerticalHalf">
+              <div class="synopsisHorizontalThird">
                 Make A Booking
               </div>
-              <div right 2/3>
+              <div class="synopsisHorizontal2Third">
                 <button>Wednesday 9pm</button><button>Thursday 9pm</button><button>Friday 9pm</button>
                 <button>Saturday 6pm</button><button>Sunday 6pm</button>
               </div>
