@@ -59,7 +59,17 @@ footer {
 
 .sub_article {
   padding-top: 30px;
+  padding-left: 30px;
   display: inline-block;
+  background-image: url("../../../media/dolbyBackground.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.articlePadding {
+  padding-bottom: 30px;
 }
 
 .navList {
@@ -187,6 +197,28 @@ padding: 0 0 0 0;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "avengers  tEW " "dumbo  tHP ";
+  width: 80%;
+  margin-left: 10%;
+}
+
+@media screen and (max-width: 950px) {
+  .posterContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "avengers"  "tEW " "dumbo"  "tHP ";
+    width: 80%;
+    margin-left: 10%;
+    min-width: 500px;
+  }
+  .posterContainer img {
+    width:40%;
+    min-width: 200px;
+  }
+
+  .posterText {
+    min-width: 231px;
+  }
 }
 
 .avengers  {
@@ -213,13 +245,16 @@ padding: 0 0 0 0;
 
 .poster {
   padding: 10px 10px 7px 10px;
-  width: 15vw;
+  width: 45%;
+  vertical-align: middle;
 }
 
 .postCard {
   box-shadow: 10px 6px #4e4e50;
   margin: 10px 10px 10px 10px;
   background-color: #c3073f;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /*colours:
@@ -250,6 +285,59 @@ padding: 0 0 0 0;
   text-align: center;
 }
 
+.postCard h4 {
+  color: #fff;
+  float: right;
+  font-size: 1.2em;
+  margin-top: 1em;
+  padding-right: 1em;
+  margin-bottom: 0;
+  width: auto;
+  height: 10%;
+  display: block;
+}
+
+.timesList {
+  text-align: center;
+}
+
+.posterTitles {
+  display: inline-block;
+  height: 20%;
+  width: 100%;
+}
+
+.postCard h3 {
+  color: #fff;
+  float: left;
+  font-size: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 0;
+  width: 50%;
+  height: 10%;
+  display: block;
+}
+
+.posterText {
+  float: right;
+  width: 53%;
+  padding-top: 5%;
+  text-align: center;
+}
+
+.posterText ul {
+  list-style: none;
+  text-align: center;
+  align-self: center;
+  display: inline-block;
+  padding-inline-start: 0;
+}
+
+.posterText ul li {
+  padding-top: 10px;
+  tex
+}
+
 .first h3 {
   color: #000;
   font-size: 2em;
@@ -261,12 +349,22 @@ padding: 0 0 0 0;
   width: 60%;
   background-color: #4e4e50;
   vertical-align: middle;
+  margin-bottom: 10px;
 }
 
 .specialPrice {
   height: 30%;
   width: 60%;
   background-color: gold;
+}
+
+.standard h3 {
+  height: 19%;
+}
+
+.priceDiv {
+  margin-top: auto;
+  height: 80%;
 }
 
 .standard span {
@@ -308,7 +406,9 @@ padding: 0 0 0 0;
 }
 
 .factContainer {
-  display: inline-block;
+  display: inline-flex;
+  width: 40%;
+  text-overflow:  ellipsis;
 }
 
 .dolbyFooter {
@@ -327,26 +427,61 @@ padding: 0 0 0 0;
   display: block;
 }
 
+.priceCentre {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 .inlineRight {
-  width: auto;
+  width: 70%;
 }
 
 .dolbyFactList {
-  width: 50%;
+  width: 100%;
   float: left;
+  display: inline-block;
   padding: 0 10px 0 0;
   margin-block-start: 0;
   min-width: 300px;
 }
 
 .dolbyFact {
-  width: 20vw;
+  width: 100%;
   margin-right: 0px;
+  display: inline-block;
+  min-width: 200px;
 }
 
 .dolbyBorder {
   padding-top: 20px;
 }
+
+
+@media screen and (max-width: 1100px) {
+  .inline, .inlineLeft, .inlineRight {
+    width: 90%;
+    display: block;
+    text-align: left;
+  }
+
+  .inlineRight {
+    padding-left: auto;
+    align-content: left;
+  }
+
+  .factCentre {
+    width: 81%
+  }
+
+  .factContainer {
+    width: 49%;
+  }
+  .imageCentre {
+    margin: 0 0;
+  }
+}
+
 
 #dolbyAtmos {
   width: 10vw;

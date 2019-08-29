@@ -34,7 +34,7 @@
         <div>
           <h2>An Experience Re-imagined</h2>
         </div>
-        <div>
+        <div class="articlePadding">
           <div class="imageDiv">
             <div class="imageHalf">
               <img src="../../media/standardSeat.png" class="seatImage imageCentre">
@@ -49,8 +49,6 @@
           </div>
         </div>
 
-
-
         <div class="sub_article">
           <h3>Revamped Sound and Visuals</h3>
           <div class="inlineContainer">
@@ -58,37 +56,39 @@
               <img id="dolbyAtmos" class="imageCentre" src="../../media/atmos.png">
             </div>
             <div class="inline inlineRight">
-              <div class="factContainer">
-                <ul class="dolbyFactList">
-                  <li class="dolbyFact">
-                    <h4>All sides covered</h4>
-                    <p>
-                      The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
-                    </p>
-                  </li>
-                  <li class="dolbyFact">
-                    <h4>All sides covered</h4>
-                    <p>
-                      The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div class="factContainer">
-                <ul class="dolbyFactList">
-                  <li class="dolbyFact">
-                    <h4>All sides covered</h4>
-                    <p>
-                      The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
-                    </p>
-                  </li>
-                  <li class="dolbyFact">
-                    <h4>All sides covered</h4>
-                    <p>
-                      The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
-                    </p>
-                  </li>
-                </ul>
+              <div class="factCentre">
+                <div class="factContainer">
+                  <ul class="dolbyFactList">
+                    <li class="dolbyFact">
+                      <h4>All sides covered</h4>
+                      <p>
+                        The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
+                      </p>
+                    </li>
+                    <li class="dolbyFact">
+                      <h4>Artist's intent</h4>
+                      <p>
+                        With rich quality and true immersion, you can finally discover the film the way the creator intended it.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="factContainer">
+                  <ul class="dolbyFactList">
+                    <li class="dolbyFact">
+                      <h4>Sound that moves you</h4>
+                      <p>
+                        With the 3D layout of the speakers, the movie will feel all the more immersive as you experience the world as rich as can be.
+                      </p>
+                    </li>
+                    <li class="dolbyFact">
+                      <h4>Senses Excited</h4>
+                      <p>
+                        With true bass and surround sound, the impact of the film makes you feel the emotion of the film all the more.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -97,37 +97,39 @@
               <img id="dolbyAtmos" class="imageCentre" src="../../media/vision.png">
             </div>
             <div class="inline inlineRight">
-              <div class="factContainer">
-                <ul class="dolbyFactList">
-                  <li class="dolbyFact">
-                    <h4>All sides covered1</h4>
-                    <p>
-                      The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
-                    </p>
-                  </li>
-                  <li class="dolbyFact">
-                    <h4>All sides covered2</h4>
-                    <p>
-                      The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-              <div class="factContainer">
-                <ul class="dolbyFactList">
-                  <li class="dolbyFact">
-                    <h4>All sides covered3</h4>
-                    <p>
-                      The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
-                    </p>
-                  </li>
-                  <li class="dolbyFact">
-                    <h4>All sides covered4</h4>
-                    <p>
-                      The movies comes alive as sound is produced on all sides, including above you, whisking the whole cinema into the world of the movie.
-                    </p>
-                  </li>
-                </ul>
+              <div class="factCentre">
+                <div class="factContainer">
+                  <ul class="dolbyFactList">
+                    <li class="dolbyFact">
+                      <h4>Dolby Expertise</h4>
+                      <p>
+                        Dolby has many years of engineering film experiences, and the Dolby Vision experince promises to be on a whole new level.
+                      </p>
+                    </li>
+                    <li class="dolbyFact">
+                      <h4>Beautiful Colour</h4>
+                      <p>
+                        With all new HDR technology advancements, the film will bloom beautifully off the screen.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="factContainer">
+                  <ul class="dolbyFactList">
+                    <li class="dolbyFact">
+                      <h4>Full Support</h4>
+                      <p>
+                        Dolby Vision supports hundreds of movies, with more being added every day
+                      </p>
+                    </li>
+                    <li class="dolbyFact">
+                      <h4>More than just the movie</h4>
+                      <p>
+                        Dolby Vision is also available for your home, with support for laptops, tablets, phones and home computers.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -146,56 +148,82 @@
           </div>
           <div class="std1 standard">
             <h3>Standard Adult</h3>
-            <div class="standardPrice imageCentre">
-              <span>Standard: $19.80</span>
-            </div>
-            <div class="specialPrice imageCentre">
-              <span>Special: $14.00</span>
+            <div class="priceDiv">
+              <div class="standardPrice priceCentre">
+                <span>
+                  Standard:
+                  <p>$19.80
+                </span>
+              </div>
+              <div class="specialPrice priceCentre">
+                <span>Special:
+                <p>$14.00</span>
+              </div>
             </div>
           </div>
           <div class="std2 standard">
             <h3>Standard Concession</h3>
-            <div class="standardPrice imageCentre">
-              <span>Standard: $17.50</span>
-            </div>
-            <div class="specialPrice imageCentre">
-              <span>Special: $12.50</span>
+            <div class="priceDiv">
+              <div class="standardPrice priceCentre">
+                <span>Standard:
+                <p>$17.50</span>
+              </div>
+              <div class="specialPrice priceCentre">
+                <span>Special:
+                <p>$12.50</span>
+              </div>
             </div>
           </div>
           <div class="std3 standard">
             <h3>Standard Child</h3>
-            <div class="standardPrice imageCentre">
-              <span>Standard: $15.30</span>
-            </div>
-            <div class="specialPrice imageCentre">
-              <span>Special: $11.00</span>
+            <div class="priceDiv">
+              <div class="standardPrice priceCentre">
+                <span>Standard:
+                <p>$15.30</span>
+              </div>
+              <div class="specialPrice priceCentre">
+                <span>Special:
+                <p>$11.00</span>
+              </div>
             </div>
           </div>
           <div class="first1 first">
             <h3>First Class Adult</h3>
-            <div class="standardPrice imageCentre">
-              <span>Standard: $30.00</span>
-            </div>
-            <div class="specialPrice imageCentre">
-              <span>Special: $24.00</span>
+            <div class="priceDiv">
+              <div class="standardPrice priceCentre">
+                <span>Standard:
+                <p>$30.00</span>
+              </div>
+              <div class="specialPrice priceCentre">
+                <span>Special:
+                <p>$24.00</span>
+              </div>
             </div>
           </div>
           <div class="first2 first">
             <h3>First Class Concession</h3>
-            <div class="standardPrice imageCentre">
-              <span>Standard: $27.00</span>
-            </div>
-            <div class="specialPrice imageCentre">
-              <span>Special: $22.50</span>
+            <div class="priceDiv">
+              <div class="standardPrice priceCentre">
+                <span>Standard:
+                <p>$27.00</span>
+              </div>
+              <div class="specialPrice priceCentre">
+                <span>Special:
+                <p>$22.50</span>
+              </div>
             </div>
           </div>
           <div class="first3 first">
             <h3>First Class Child</h3>
-            <div class="standardPrice imageCentre">
-              <span>Standard: $24.00</span>
-            </div>
-            <div class="specialPrice imageCentre">
-              <span>Special: $21.00</span>
+            <div class="priceDiv">
+              <div class="standardPrice priceCentre">
+                <span>Standard:
+                <p>$24.00</span>
+              </div>
+              <div class="specialPrice priceCentre">
+                <span>Special:
+                <p>$21.00</span>
+              </div>
             </div>
           </div>
         </div>
@@ -205,10 +233,74 @@
         <div class="articleContainer">
           <h1>Now Showing</h1>
           <div class="posterContainer">
-            <div class="avengers postCard"><img class="poster" src="../../media/avengers.png"></div>
-            <div class="tEW postCard"><img class="poster" src="../../media/topEndWedding.png"></div>
-            <div class="dumbo postCard"><img class="poster" src="../../media/dumbo.png"></div>
-            <div class="tHP postCard"><img class="poster" src="../../media/theHappyPrince.png"></div>
+            <div class="avengers postCard">
+              <img class="poster" src="../../media/avengers.png">
+              <div class="posterText">
+                <div class="posterTitles">
+                  <h3>Avengers: Endgame</h3><h4>PG</h4>
+                </div>
+                <div class="timesList">
+                  <ul>
+                    <li>Wednesday - 9pm</li>
+                    <li>Thursday - 9pm</li>
+                    <li>Friday - 9pm</li>
+                    <li>Saturday - 6pm</li>
+                    <li>Sunday - 6pm</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tEW postCard">
+              <img class="poster" src="../../media/topEndWedding.png">
+              <div class="posterText">
+                <div class="posterTitles">
+                  <h3>Top End Wedding</h3><h4>M</h4>
+                </div>
+                <div class="timesList">
+                  <ul>
+                    <li>Wednesday - 9pm</li>
+                    <li>Thursday - 9pm</li>
+                    <li>Friday - 9pm</li>
+                    <li>Saturday - 6pm</li>
+                    <li>Sunday - 6pm</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="dumbo postCard">
+              <img class="poster" src="../../media/dumbo.png">
+              <div class="posterText">
+                <div class="posterTitles">
+                  <h3>Dumbo</h3><h4>G</h4>
+                </div>
+                <div class="timesList">
+                  <ul>
+                    <li>Wednesday - 9pm</li>
+                    <li>Thursday - 9pm</li>
+                    <li>Friday - 9pm</li>
+                    <li>Saturday - 6pm</li>
+                    <li>Sunday - 6pm</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tHP postCard">
+              <img class="poster" src="../../media/theHappyPrince.png">
+              <div class="posterText">
+                <div class="posterTitles">
+                  <h3>The Happy Prince</h3><h4>R18+</h4>
+                </div>
+                <div class="timesList">
+                  <ul>
+                    <li>Wednesday - 9pm</li>
+                    <li>Thursday - 9pm</li>
+                    <li>Friday - 9pm</li>
+                    <li>Saturday - 6pm</li>
+                    <li>Sunday - 6pm</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="synopsisContainer">
             <div top>
