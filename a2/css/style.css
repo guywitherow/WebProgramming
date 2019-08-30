@@ -167,35 +167,32 @@ h1 {
   margin-left: 10%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 70px 40px repeat(2, 40vh);
+  grid-template-rows: 40px repeat(2, 40vh);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   padding: 0 0 0 0;
 }
 
-.title {
+.subtitle {
   grid-area: 1 / 1 / 2 / 4;
 }
-.subtitle {
-  grid-area: 2 / 1 / 3 / 4;
-}
 .std1 {
-  grid-area: 3 / 1 / 4 / 2;
+  grid-area: 2 / 1 / 3 / 2;
 }
 .std2 {
-  grid-area: 3 / 2 / 4 / 3;
+  grid-area: 2 / 2 / 3 / 3;
 }
 .std3 {
-  grid-area: 3 / 3 / 4 / 4;
+  grid-area: 2 / 3 / 3 / 4;
 }
 .first1 {
-  grid-area: 4 / 1 / 5 / 2;
+  grid-area: 3 / 1 / 4 / 2;
 }
 .first2 {
-  grid-area: 4 / 2 / 5 / 3;
+  grid-area: 3 / 2 / 4 / 3;
 }
 .first3 {
-  grid-area: 4 / 3 / 5 / 4;
+  grid-area: 3 / 3 / 4 / 4;
 }
 
 .posterContainer {
@@ -241,6 +238,10 @@ h1 {
 
 .tHP  {
   grid-area: tHP;
+}
+
+.details {
+  list-style: none;
 }
 
 .articleContainer {

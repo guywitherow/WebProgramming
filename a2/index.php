@@ -27,7 +27,7 @@
         <a href="#nowShowing"><li class="navItem last">Now Showing</li></a>
       </ul>
     </nav>
-    
+
     <main>
       <article class="article" id="aboutUs">
         <h1>About Us</h1>
@@ -140,10 +140,8 @@
       </article>
 
       <article class="article" id="prices">
+        <h1>Prices</h1>
         <div class="gridContainer">
-          <div class="title">
-            <h1>Prices</h1>
-          </div>
           <div class="subtitle">
             Special prices apply to midday sessions on Monday to Friday, as well as all day Monday and Wednesday.
           </div>
@@ -332,6 +330,12 @@
     </main>
 
     <footer>
+      For any personal enquiries, feel free to contact the owner, Leo Tarkesian.
+      <ul class="details">
+        <li>Email: manager@lunardo.com</li>
+        <li>Phone: 0412-345-678</li>
+        <li>Address: 18 Dolevale Cresent, Duckburg, AXY 5632</li>
+      </ul>
       <div>&copy;<script>
         document.write(new Date().getFullYear());
       </script> Guy Witherow s3783428, Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
