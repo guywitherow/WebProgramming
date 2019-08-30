@@ -27,7 +27,7 @@
         <a href="#nowShowing"><li class="navItem last">Now Showing</li></a>
       </ul>
     </nav>
-
+    
     <main>
       <article class="article" id="aboutUs">
         <h1>About Us</h1>
@@ -37,12 +37,12 @@
         <div class="articlePadding">
           <div class="imageDiv">
             <div class="imageHalf">
-              <img src="../../media/standardSeat.png" class="seatImage imageCentre">
+              <img src="../../media/standardSeat.png" class="seatImage imageCentre" alt="Image of the standard cinema seat">
               <h3>Standard Seating</h3>
               <p>The new standard seating sports luxurious cushioning, as well as adjustable armrests with cupholders!
             </div>
             <div class="imageHalf">
-              <img src="../../media/firstClassSeat.png" class="seatImage imageCentre">
+              <img src="../../media/firstClassSeat.png" class="seatImage imageCentre" alt="image of the first class cinema seat">
               <h3>First Class Seating</h3>
               <p>First Class takes comfort to a new level, with leg rests that raise, comforting you through your first class experience.
             </div>
@@ -53,7 +53,7 @@
           <h3>Revamped Sound and Visuals</h3>
           <div class="inlineContainer">
             <div class="inline inlineLeft">
-              <img id="dolbyAtmos" class="imageCentre" src="../../media/atmos.png">
+              <img id="dolbyAtmos" class="imageCentre" src="../../media/atmos.png" alt="image of the dolby atmos logo">
             </div>
             <div class="inline inlineRight">
               <div class="factCentre">
@@ -94,7 +94,7 @@
           </div>
           <div class="inlineContainer dolbyBorder">
             <div class="inline inlineLeft">
-              <img id="dolbyAtmos" class="imageCentre" src="../../media/vision.png">
+              <img id="dolbyAtmos" class="imageCentre" src="../../media/vision.png" alt="image of the dolby vision logo">
             </div>
             <div class="inline inlineRight">
               <div class="factCentre">
@@ -138,6 +138,7 @@
           </div>
         </div>
       </article>
+
       <article class="article" id="prices">
         <div class="gridContainer">
           <div class="title">
@@ -234,7 +235,7 @@
           <h1>Now Showing</h1>
           <div class="posterContainer">
             <div class="avengers postCard">
-              <img class="poster" src="../../media/avengers.png">
+              <img class="poster" src="../../media/avengers.png" alt="Avengers endgame poster">
               <div class="posterText">
                 <div class="posterTitles">
                   <h3>Avengers: Endgame</h3><h4>PG</h4>
@@ -251,7 +252,7 @@
               </div>
             </div>
             <div class="tEW postCard">
-              <img class="poster" src="../../media/topEndWedding.png">
+              <img class="poster" src="../../media/topEndWedding.png" alt="top end wedding poster">
               <div class="posterText">
                 <div class="posterTitles">
                   <h3>Top End Wedding</h3><h4>M</h4>
@@ -268,7 +269,7 @@
               </div>
             </div>
             <div class="dumbo postCard">
-              <img class="poster" src="../../media/dumbo.png">
+              <img class="poster" src="../../media/dumbo.png" alt="dumbo poster">
               <div class="posterText">
                 <div class="posterTitles">
                   <h3>Dumbo</h3><h4>G</h4>
@@ -285,7 +286,7 @@
               </div>
             </div>
             <div class="tHP postCard">
-              <img class="poster" src="../../media/theHappyPrince.png">
+              <img class="poster" src="../../media/theHappyPrince.png" alt="the happy prince poster">
               <div class="posterText">
                 <div class="posterTitles">
                   <h3>The Happy Prince</h3><h4>R18+</h4>
