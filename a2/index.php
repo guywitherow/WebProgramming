@@ -303,24 +303,24 @@
             </div>
           </div>
           <div class="synopsisContainer">
-            <div class="synopsisVerticalHalf">
-              <div class="synopsisHorizontalHalf">
-                <div class="synopsisVerticalHalf">
-                  Avengers: Endgame     PG
+            <div class="synopsisVerticalMain">
+              <div class="synopsisHorizontalHalf1">
+                <div class="synopsisVerticalTitle">
+                  <span class="synopsisTitle">Avengers: Endgame</span> <span class="synopsisRating">PG</span>
                 </div>
-                <div class="synopsisVerticalHalf">
+                <div class="synopsisVerticalDetails">
                   After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.
                 </div>
               </div>
-              <div class="synopsisHorizontalHalf">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <div class="synopsisHorizontalHalf2">
+                <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
-            <div class="synopsisVerticalHalf">
-              <div class="synopsisHorizontalThird">
+            <div class="synopsisVerticalFill">
+              <div class="synopsisHorizontalBooking">
                 Make A Booking
               </div>
-              <div class="synopsisHorizontal2Third">
+              <div class="synopsisHorizontalButtons">
                 <button>Wednesday 9pm</button><button>Thursday 9pm</button><button>Friday 9pm</button>
                 <button>Saturday 6pm</button><button>Sunday 6pm</button>
               </div>
