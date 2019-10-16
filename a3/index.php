@@ -3,25 +3,35 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment 2</title>
+    <title>Assignment 3</title>
+
+    <?php
+    function oneToTen() {
+      echo "<option value=></option>";
+      for ($i = 0; $i < 10; $i++) {
+        echo "<option value=",$i+1,">",$i+1,"</option>";
+      }
+    }
+     ?>
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link href="https://fonts.googleapis.com/css?family=Lato|Righteous&display=swap" rel="stylesheet">
     <script src='../wireframe.js'></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
-  <body>
-
+  <body onscroll="updateNav()">
+    <script src="script.js"></script>
     <header class="wide100">
       <img id="logo" src="../../media/lunardo_logo_no_text.png" alt="Logo of Lunardo Cinema">
       <span id="title">Lunardo</span>
     </header>
 
     <nav>
-      <ul class="navList">
+      <ul class="navList" id="navList">
         <a href="#aboutUs"><li class="navItem">About Us</li></a>
         <a href="#prices"><li class="navItem">Prices</li></a>
         <a href="#nowShowing"><li class="navItem last">Now Showing</li></a>
@@ -233,7 +243,10 @@
           <h1>Now Showing</h1>
           <div class="posterContainer">
             <div class="avengers postCard">
-              <img class="poster" src="../../media/avengers.png" alt="Avengers endgame poster">
+              <div class="posterDiv">
+                <img class="poster" src="../../media/avengers.png" alt="Avengers endgame poster">
+                <button class="detailsButton" onclick="ACTInfo()">More info</button>
+              </div>
               <div class="posterText">
                 <div class="posterTitles">
                   <h3>Avengers: Endgame</h3><h4>PG</h4>
@@ -250,52 +263,62 @@
               </div>
             </div>
             <div class="tEW postCard">
-              <img class="poster" src="../../media/topEndWedding.png" alt="top end wedding poster">
+              <div class="posterDiv">
+                <img class="poster" src="../../media/topEndWedding.png" alt="top end wedding poster">
+                <button class="detailsButton" onclick="RMCInfo()">More info</button>
+              </div>
               <div class="posterText">
                 <div class="posterTitles">
                   <h3>Top End Wedding</h3><h4>M</h4>
                 </div>
                 <div class="timesList">
                   <ul>
-                    <li>Wednesday - 9pm</li>
-                    <li>Thursday - 9pm</li>
-                    <li>Friday - 9pm</li>
-                    <li>Saturday - 6pm</li>
-                    <li>Sunday - 6pm</li>
+                    <li>Monday - 6pm</li>
+                    <li>Tuesday - 6pm</li>
+                    <li>Saturday - 3pm</li>
+                    <li>Sunday - 3pm</li>
                   </ul>
                 </div>
               </div>
             </div>
             <div class="dumbo postCard">
-              <img class="poster" src="../../media/dumbo.png" alt="dumbo poster">
+              <div class="posterDiv">
+                <img class="poster" src="../../media/dumbo.png" alt="dumbo poster">
+                <button class="detailsButton" onclick="ANMInfo()">More info</button>
+              </div>
               <div class="posterText">
                 <div class="posterTitles">
                   <h3>Dumbo</h3><h4>G</h4>
                 </div>
                 <div class="timesList">
                   <ul>
-                    <li>Wednesday - 9pm</li>
-                    <li>Thursday - 9pm</li>
-                    <li>Friday - 9pm</li>
-                    <li>Saturday - 6pm</li>
-                    <li>Sunday - 6pm</li>
+                    <li>Monday - 12pm</li>
+                    <li>Tuesday - 12pm</li>
+                    <li>Wednesday - 6pm</li>
+                    <li>Thursday - 6pm</li>
+                    <li>Friday - 6pm</li>
+                    <li>Saturday - 12pm</li>
+                    <li>Sunday - 12pm</li>
                   </ul>
                 </div>
               </div>
             </div>
             <div class="tHP postCard">
-              <img class="poster" src="../../media/theHappyPrince.png" alt="the happy prince poster">
+              <div class="posterDiv">
+                <img class="poster" src="../../media/theHappyPrince.png" alt="the happy prince poster">
+                <button class="detailsButton" onclick="AHFInfo()">More info</button>
+              </div>
               <div class="posterText">
                 <div class="posterTitles">
                   <h3>The Happy Prince</h3><h4>R18+</h4>
                 </div>
                 <div class="timesList">
                   <ul>
-                    <li>Wednesday - 9pm</li>
-                    <li>Thursday - 9pm</li>
-                    <li>Friday - 9pm</li>
-                    <li>Saturday - 6pm</li>
-                    <li>Sunday - 6pm</li>
+                    <li>Wednesday - 12pm</li>
+                    <li>Thursday - 12pm</li>
+                    <li>Friday - 12pm</li>
+                    <li>Saturday - 9pm</li>
+                    <li>Sunday - 9pm</li>
                   </ul>
                 </div>
               </div>
@@ -305,25 +328,95 @@
             <div class="synopsisVerticalMain">
               <div class="synopsisHorizontalHalf1">
                 <div class="synopsisVerticalTitle">
-                  <span class="synopsisTitle">Avengers: Endgame</span> <span class="synopsisRating">PG</span>
+                  <span class="synopsisTitle" id="synopsisTitle">Avengers: Endgame</span> <span class="synopsisRating" id="synopsisRating">PG</span>
                 </div>
-                <div class="synopsisVerticalDetails">
+                <div class="synopsisVerticalDetails" id="synopsisVerticalDetails">
                   After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.
                 </div>
               </div>
               <div class="synopsisHorizontalHalf2">
-                <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="synopsisVideo" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </div>
             <div class="synopsisVerticalFill">
               <div class="synopsisHorizontalBooking">
                 Make A Booking
               </div>
-              <div class="synopsisHorizontalButtons">
-                <button>Wednesday 9pm</button><button>Thursday 9pm</button><button>Friday 9pm</button>
-                <button>Saturday 6pm</button><button>Sunday 6pm</button>
+              <div class="synopsisHorizontalButtons" id="synopsisHorizontalButtons" >
+                <button onclick="submitValue('ACT','T21','WED')">9pm Wednesday</button><button onclick="submitValue('ACT','T21','THU')">9pm Thursday</button><button onclick="submitValue('ACT','T21','FRI')">9pm Friday</button>
+                <button onclick="submitValue('ACT','T18','SAT')">6pm Saturday</button><button onclick="submitValue('ACT','T18','SUN')">6pm Sunday</button>
               </div>
             </div>
+          </div>
+          <div class="bookingContainer">
+            <form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php">
+              <input id="formTitle" name="movie[id]" type="hidden" value="ACT"  required/>
+              <input id="formDay" name="movie[day]" type="hidden" value="WED" onchange="changeDayTime()"  required />
+              <input id="formHour" name="movie[hour]" type="hidden" value="T21" onchange="changeDayTime()"  required />
+              <div class="formHalf">
+                <div class="stdForm">
+                  <label>Standard Adults</label>
+                  <select id="STA" name="seats[STA]" onchange="ticketChange('STA')">
+                    <?php
+                    oneToTen();
+                    ?>
+                  </select><br />
+                  <label>Standard Concession</label>
+                  <select id="STP" name="seats[STP]" onchange="ticketChange('STP')">
+                    <?php
+                    oneToTen();
+                    ?>
+                  </select><br />
+                  <label>Standard Children</label>
+                  <select id="STC" name="seats[STC]" onchange="ticketChange('STC')">
+                    <?php
+                    oneToTen();
+                    ?>
+                  </select><br />
+
+                </div>
+                <div class="firstForm">
+                  <label>First Class Adults</label>
+                  <select id="FCA" name="seats[FCA]" onchange="ticketChange('FCA')">
+                    <?php
+                    oneToTen();
+                    ?>
+                  </select><br />
+                  <label>First Class Concession</label>
+                  <select id="FCP" name="seats[FCP]" onchange="ticketChange('FCP')">
+                    <?php
+                    oneToTen();
+                    ?>
+                  </select><br />
+                  <label>First Class Children</label>
+                  <select id="FCC" name="seats[FCC]" onchange="ticketChange('FCC')">
+                    <?php
+                    oneToTen();
+                    ?>
+                  </select><br />
+                </div>
+                <div class="totalForm">
+                  <label>Price</label>
+                  <input id="formPrice" readonly />
+                </div>
+              </div>
+              <div class="detailsForm">
+                <label>Name</label>
+                <input name="cust[name]" pattern="[A-Z]{1}[a-z]{1,}\s[A-Z]{1}[a-z]{1,}" required/><br />
+                <label>Email</label>
+                <input name="cust[email]" required type="email" /><br />
+                <label>Mobile</label>
+                <input name="cust[mobile]" required  pattern="((\(04\)|04|\+614)[0-9]{8})"/><br />
+                <label>Credit Card</label>
+                <input name="cust[card]" required pattern="[0-9]{14,19}"/><br />
+                <label>Expiry</label>
+                <input name="cust[expiry]" required type="month" min="<?php echo date("Y-m-d") ?>"/>
+                <br />
+                <input name="order" type="submit" value="Order">
+              </div>
+
+
+            </form>
           </div>
         </div>
       </article>
@@ -342,6 +435,7 @@
       <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web Programming course at RMIT University in Melbourne, Australia.</div>
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
+
 
   </body>
 </html>

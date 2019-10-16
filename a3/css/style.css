@@ -84,6 +84,11 @@ footer {
   padding-bottom: 30px;
 }
 
+.detailsButton {
+  width: 100%;
+  display: block;
+}
+
 .navItem {
   font-size: 20px;
   float: left;
@@ -104,6 +109,11 @@ footer {
 }
 
 .navItem:hover {
+  background-color: #950740;
+  color: #000;
+}
+
+.active {
   background-color: #950740;
   color: #000;
 }
@@ -251,6 +261,13 @@ h1 {
 }
 
 .poster {
+  padding-top: 20px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.posterDiv {
+  display: inline-block;
   padding: 10px 10px 7px 10px;
   width: 45%;
   vertical-align: middle;
@@ -643,4 +660,60 @@ h1 {
   width: 10vw;
   align-self: center;
   vertical-align: middle;
+}
+
+/*colours:
+#1a1a1d = background
+#fff = text
+#4e4e50 = text (subtitle)
+#6f2232 = lowlight
+#950740 = medium
+#c3073f = highlight
+*/
+
+.bookingContainer {
+  height: auto;
+  margin-left: 10%;
+  margin-top: 30px;
+  display: inline-block;
+  background-color: #950740;
+  box-shadow: 10px 6px #4e4e50;
+  min-width: 700px;
+}
+
+.firstForm, .stdForm {
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-top: 5px;
+  box-shadow: 10px 6px #4e4e50;
+  width: 90%;
+  background-color: #6f2232;
+}
+
+.formHalf {
+  width: 40%;
+  float: left;
+}
+
+.detailsForm {
+  width: 30%;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 10px 6px #4e4e50;
+  background-color: #6f2232;
+  float: right;
+}
+
+select, input {
+  background-color: #4e4e50;
+  display: block;
+}
+
+.totalForm {
+  margin: 10px;
+  margin-left: 20px;
 }
