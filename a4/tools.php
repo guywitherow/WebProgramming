@@ -255,7 +255,9 @@ else if (basename($_SERVER['PHP_SELF']) == "receipt.php") {
           </div>
         </div>
         <div class="ticketRight"> </div>
-      </article>';
+      </article>
+      <div id="breaker" class="hidden"></div>
+      ';
       $ticketNum++;
     }
   }
@@ -340,6 +342,9 @@ function oneToTen($type) {
       else {
         $selected = "";
       }
+    }
+    else {
+      $selected = "";
     }
 
     echo "<option value=",$i+1," ",$selected,">",$i+1,"</option>";

@@ -463,8 +463,10 @@
           <br />
           <br />
           <?php
-          if ($error != "") {
-            echo $error;
+          if (isset($error)) {
+            if ($error != "") {
+              echo $error;
+            }
           }
            ?>
         </div>
