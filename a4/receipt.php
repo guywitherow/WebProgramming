@@ -89,6 +89,10 @@
         Code</button>
       </form>
 
+      <form method="post" action="">
+        <button name="session-reset" value="true">Reset Session</button>
+      </form>
+
       <div>&copy;<script>
         document.write(new Date().getFullYear());
       </script> Guy Witherow s3783428, Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>

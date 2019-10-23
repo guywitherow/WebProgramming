@@ -397,50 +397,60 @@
                 </div>
               </div>
               <div class="detailsForm">
-                <label>Name</label>
+                <label>Name
+                  <?php
+                  errorReport('name');
+                   ?>
+                 </label>
                 <input name="cust[name]" pattern="(([A-Z]{1}[a-z]{1,}|[A-Z]{1}'{1}[A-Z]{1}[a-z]{1,})\s[A-Z]{1}[a-z]{1,})" required
                 <?php
-                if (isset($_POST['cust']['name'])) {
-                  echo "value='",$_POST['cust']['name'],"'";
-                }
+                recallValues('name');
                  ?>
                 />
                 <br />
-                <label>Email</label>
+                <label>Email
+                  <?php
+                  errorReport('email');
+                   ?>
+                 </label>
                 <input name="cust[email]" required type="email"
                 <?php
-                if (isset($_POST['cust']['email'])) {
-                  echo "value=",$_POST['cust']['email'];
-                }
+                recallValues('email');
                  ?>
                 />
                 <br />
-                <label>Mobile</label>
+                <label>Mobile
+                  <?php
+                  errorReport('mobile');
+                   ?>
+                 </label>
                 <input name="cust[mobile]" required  pattern="(\(04\)|04|\+614)[0-9]{8}|[0-9 ]{17}"
 
                 <?php
-                if (isset($_POST['cust']['mobile'])) {
-                  echo "value=",$_POST['cust']['mobile'];
-                }
+                recallValues('mobile');
                  ?>
                 />
                 <br />
-                <label>Credit Card</label>
+                <label>Credit Card
+                  <?php
+                  errorReport("card");
+                   ?>
+                 </label>
                 <input name="cust[card]" required pattern="[0-9]{14,19}"
                 <?php
-                if (isset($_POST['cust']['card'])) {
-                  echo "value=",$_POST['cust']['card'];
-                }
+                recallValues('card');
                  ?>
                 />
 
                 <br />
-                <label>Expiry</label>
+                <label>Expiry
+                  <?php
+                  errorReport('expiry');
+                   ?>
+                 </label>
                 <input name="cust[expiry]" required type="month" min="<?php echo date("Y-m") ?>"
                 <?php
-                if (isset($_POST['cust']['expiry'])) {
-                  echo "value=",$_POST['cust']['expiry'];
-                }
+                recallValues('expiry');
                  ?>
                 />
                 <br />
@@ -454,21 +464,10 @@
                 }
                  ?>
                 >
-
               </div>
-
 
             </form>
           </div>
-          <br />
-          <br />
-          <?php
-          if (isset($error)) {
-            if ($error != "") {
-              echo $error;
-            }
-          }
-           ?>
         </div>
       </article>
     </main>
@@ -480,6 +479,43 @@
         <li>Phone: 0412-345-678</li>
         <li>Address: 18 Dolevale Cresent, Duckburg, AXY 5632</li>
       </ul>
+
+      <form method="post" action="">
+        <button name="seeCode" value=
+        <?php
+        if (isset($_POST['seeCode'])) {
+          if ($_POST['seeCode'] == 'true') {
+            echo 'false type="submit">Hide ';
+          }
+          else {
+            echo 'true type="submit">See ';
+          }
+        }
+        else {
+          echo 'true type="submit">See ';
+        }
+        ?>
+        Code</button>
+      </form>
+
+      <form method="post" action="" name="reset">
+        <button name="reset-session" value=
+        <?php
+        if (isset($_POST['reset-session'])) {
+          if ($_POST['reset-session'] == 'true') {
+            echo 'false type="submit">';
+          }
+          else {
+            echo 'true type="submit">';
+          }
+        }
+        else {
+          echo 'true type="submit">';
+        }
+        ?>
+        Reset Session</button>
+      </form>
+
       <div>&copy;<script>
         document.write(new Date().getFullYear());
       </script> Guy Witherow s3783428, Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>

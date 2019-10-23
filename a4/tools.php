@@ -1,11 +1,20 @@
 <?php
-  session_start();
+session_start();
+
+if (isset($_POST['session-reset'])) {
+  if ($_POST['session-reset'] == 'true') {
+    foreach($_SESSION as $something => $whatever) {
+      unset($whatever);
+    }
+  }
+}
+
 // Put your PHP functions and modules here
 if (basename($_SERVER['PHP_SELF']) == "index.php") {
   if (isset($_POST['movie'])) {
     if (filter_input_array(INPUT_POST)) {
       $dataArray = [];
-      $error = "";
+      $_SESSION['error'] = [];
       $dataArray['movie'] = $_POST['movie'];
       $dataArray['seats'] = $_POST['seats'];
       $dataArray['cust'] = $_POST['cust'];
@@ -17,17 +26,26 @@ if (basename($_SERVER['PHP_SELF']) == "index.php") {
         switch ($key) {
           case 'id':
             if (strlen($value) != 3 || !ctype_alpha($value)) {
-              $error .= "The id value has been modified to a bad value.";
+              $_SESSION['error']['id'] = "The id value has been modified to a bad value.";
+            }
+            else {
+              $_SESSION['error']['id'] = "";
             }
             break;
           case 'day':
             if (strlen($value) != 3 || !ctype_alpha($value)) {
-              $error .= "The day value has been modified to a bad value.";
+              $_SESSION['error']['day'] = "The day value has been modified to a bad value.";
+            }
+            else {
+              $_SESSION['error']['day'] = "";
             }
             break;
           case 'hour':
             if (strlen($value) != 3) {
-              $error .= "The day value has been modified to a bad value.";
+              $_SESSION['error']['hour'] = "The day value has been modified to a bad value.";
+            }
+            else {
+              $_SESSION['error']['hour'] = "";
             }
             break;
           default:
@@ -41,42 +59,61 @@ if (basename($_SERVER['PHP_SELF']) == "index.php") {
           $value = 0;
         }
         if (!(-1 < $value || $value < 11)) {
-          $error .= "There is an error with the input ".$key;
+          $_SESSION['error'][$key] = "There is an error with the input ".$key;
         }
         else {
           $totalTickets += $value;
+          $_SESSION['error'][$key] = '';
         }
       }
 
       if ($totalTickets == 0) {
-        $error .= "You must order at least one ticket for a valid order.";
+        $_SESSION['error']['tickets'] = "You must order at least one ticket for a valid order.";
+      }
+      else {
+        $_SESSION['error']['tickets'] = "";
       }
 
       foreach ($dataArray['cust'] as $key => $value) {
         switch ($key) {
           case 'name':
             if (!preg_match("#(([A-Z]{1}[a-z]{1,}|[A-Z]{1}'{1}[A-Z]{1}[a-z]{1,})\s[A-Z]{1}[a-z]{1,})#",$value)) {
-              $error .= "The name value has been modified to a bad value.";
+              $_SESSION['error']['name'] = "The name value has been modified to a bad value.";
+            }
+            else {
+              $_SESSION['error']['name'] = "";
             }
             break;
           case 'email':
             if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
-              $error .= "The email value has been modified to a bad value.";
+              $_SESSION['error']['email'] = "The email value has been modified to a bad value.";
+            }
+            else {
+              $_SESSION['error']['email'] = "";
             }
             break;
           case 'mobile':
             if (!preg_match("#(\(04\)|04|\+614)[0-9]{8}|[0-9 ]{17}#",$value)) {
-              $error .= "The mobile value has been modified to a bad value.";
+              $_SESSION['error']['mobile'] = "The mobile value has been modified to a bad value.";
+            }
+            else {
+              $_SESSION['error']['mobile'] = "";
             }
             break;
           case 'card':
             if (!is_numeric($value) ||  14 > strlen($value) || strlen($value) > 19) {
-              $error .= "The card value has been modified to a bad value.";
+              $_SESSION['error']['card'] = "The card value has been modified to a bad value.";
+            }
+            else {
+              $_SESSION['error']['card'] = "";
             }
             break;
           case 'expiry':
             if (!preg_match("#[0-9]{4}-[0-9]{2}#",$value)) {
-              $error .= "The expiry value has been modified to a bad value.";
+              $_SESSION['error']['expiry'] = "The expiry value has been modified to a bad value.";
+            }
+            else {
+              $_SESSION['error']['expiry'] = "";
             }
             break;
           default:
@@ -84,7 +121,14 @@ if (basename($_SERVER['PHP_SELF']) == "index.php") {
             break;
         }
       }
-      if ($error == "") {
+      $hasError = false;
+      foreach ($_SESSION['error'] as $key => $value) {
+        if ($value != '') {
+          $hasError = true;
+        }
+      }
+
+      if (!$hasError) {
         $_SESSION['cart'] = $_POST;
         header("Location: receipt.php");
       }
@@ -411,6 +455,20 @@ function updatePrice($dataArray) {
   return [$totalPrice,$eachPrice];
 }
 
+function errorReport($type) {
+  if (isset($_SESSION['error'][$type])) {
+    if ($_SESSION['error'][$type] != '') {
+      echo "<br /><i>(",$_SESSION['error'][$type],")</i>";
+    }
+  }
+}
+
+function recallValues($type) {
+  if (isset($_POST['cust'][$type])) {
+    echo "value='",$_POST['cust'][$type],"'";
+  }
+}
+
 //functions here are taken from the assignment sheet
 //"preShow()" function prints data and shape/structure of data
 function preShow( $arr, $returnAsString=false ) {
@@ -439,14 +497,6 @@ function php2js( $arr, $arrName ) {
   echo "  $$arrName = ".json_encode($arr, JSON_PRETTY_PRINT);
   echo "</script>\n\n";
 }
-
-//A 'reset the session' submit button
-
-// if (isset($_POST['session-reset'])) {
-//   foreach($_SESSION as $something => &$whatever) {
-//     unset($whatever);
-//   }
-// }
 
 
 ?>
