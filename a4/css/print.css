@@ -1,0 +1,64 @@
+.taxReceipt {
+  height: 100vh;
+}
+
+* {
+  color: black;
+}
+
+#logo {
+  width: 20vw;
+}
+
+.right {
+  font-size: 50pt;
+  float: right;
+  padding-top: 20px;
+}
+
+.receiptThird {
+  width: 50vw;
+  font-size: 12pt;
+  display: block;
+  text-align: left;
+}
+
+.ticketLeft {
+  height: 100px;
+  width: 100vw;
+  padding-left: 10px;
+  display: inline-block;
+  float: left;
+  border: 2px solid black;
+}
+.ticketRight {
+  float: left;
+  height: 0px;
+  width: 10px;
+  margin-right: 45%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.ticketInnerRight {
+  text-align: right;
+  width: 40%;
+  height: 100px;
+  display: inline-block;
+  font-size: 13pt;
+}
+.ticketInnerLeft {
+  text-align: left;
+  width: 49%;
+  height: 100px;
+  display: inline-block;
+}
+
+.ticketMovie {
+  font-size: 10pt;
+}
+
+.ticketHeader {
+  font-size: 12pt;
+  text-shadow: 0px 0px #FFF;
+}
