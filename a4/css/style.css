@@ -11,7 +11,6 @@
 */
 
 * {
-  color: #fff;
   box-sizing: border-box;
 }
 
@@ -46,6 +45,7 @@ html {
 }
 
 body {
+  color: #fff;
   font-family: 'Lato', sans-serif;
   padding: 0 100px 0 100px;
   background-color: #1a1a1d;
@@ -87,6 +87,7 @@ footer {
 .detailsButton {
   width: 100%;
   display: block;
+  margin-left: 0;
 }
 
 .navItem {
@@ -102,6 +103,11 @@ footer {
 
 .last {
   border-right: 0px;
+}
+
+a {
+  text-decoration: underline;
+  color: #FFF;
 }
 
 .navItem a {
@@ -662,15 +668,6 @@ h1 {
   vertical-align: middle;
 }
 
-/*colours:
-#1a1a1d = background
-#fff = text
-#4e4e50 = text (subtitle)
-#6f2232 = lowlight
-#950740 = medium
-#c3073f = highlight
-*/
-
 .bookingContainer {
   height: auto;
   margin-left: 10%;
@@ -700,7 +697,7 @@ h1 {
 .detailsForm {
   width: 30%;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 15%;
   margin-bottom: 10px;
   padding: 10px;
   box-shadow: 10px 6px #4e4e50;
@@ -711,9 +708,161 @@ h1 {
 select, input {
   background-color: #4e4e50;
   display: block;
+  color: #FFF;
 }
 
 .totalForm {
   margin: 10px;
   margin-left: 20px;
+}
+
+/*colours:
+#1a1a1d = background
+#fff = text
+#4e4e50 = text (subtitle)
+#6f2232 = lowlight
+#950740 = medium
+#c3073f = highlight
+*/
+
+.formHeader {
+  margin-left: 20px;
+}
+
+.ticket, .ticketGold {
+  margin-top: 10px;
+  display: flex;
+}
+
+.ticketLeft {
+  height: 150px;
+  width: 450px;
+  background: linear-gradient(-137deg, #c3073f 6px, transparent 0) 0 5px, linear-gradient(320deg, #c3073f 5px, #1a1a1d 0) 0 5px;
+  background-color: #c3073f;
+  background-position: left bottom;
+  background-repeat: repeat-y;
+  background-size: 10px 10px;
+  padding-left: 10px;
+  display: inline-block;
+  float: left;
+}
+.ticketRight {
+  float: left;
+  height: 150px;
+  width: 10px;
+  margin-right: 45%;
+  background: linear-gradient(137deg, #c3073f 6px, transparent 0) 0 5px, linear-gradient(-320deg, #c3073f 5px, #1a1a1d 0) 0 5px;
+  background-color: #c3073f;
+  background-position: right bottom;
+  background-repeat: repeat-y;
+  background-size: 10px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.ticketInnerRight {
+  text-align: right;
+  width: 30%;
+  height: 150px;
+  display: inline-block;
+  font-size: 1.5em;
+}
+.ticketInnerLeft {
+  text-align: left;
+  width: 60%;
+  height: 150px;
+  display: inline-block;
+  line-height: 22px;
+}
+
+.ticketHeader {
+  font-size: 1.5em;
+  text-shadow: 2px 2px #000;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.receiptDetails {
+  text-align: left;
+  width: 100%;
+}
+
+.details {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.receiptItems {
+  width: 100%;
+}
+
+.right {
+  text-align: right;
+}
+
+.taxReceipt {
+  margin-bottom: 3em;
+  font-family: 'Lato', sans-serif;
+}
+
+.receiptThird {
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+}
+
+.receiptLunardo {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tableTop {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.detailsID {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+.ticketGold .ticketLeft {
+  height: 150px;
+  width: 450px;
+  background: linear-gradient(-137deg, #e3c400 6px, transparent 0) 0 5px, linear-gradient(320deg, #e3c400 5px, #1a1a1d 0) 0 5px;
+  background-color: #e3c400;
+  background-position: left bottom;
+  background-repeat: repeat-y;
+  background-size: 10px 10px;
+  padding-left: 10px;
+  display: inline-block;
+  float: left;
+}
+
+.ticketGold #goldTextOverride {
+  color: #000;
+}
+
+.ticketGold .ticketHeader {
+  text-shadow: 2px 2px #FFF;
+}
+
+.ticketGold .ticketRight {
+  float: left;
+  height: 150px;
+  width: 10px;
+  margin-right: 45%;
+  background: linear-gradient(137deg, #e3c400 6px, transparent 0) 0 5px, linear-gradient(-320deg, #e3c400 5px, #1a1a1d 0) 0 5px;
+  background-color: #e3c400;
+  background-position: right bottom;
+  background-repeat: repeat-y;
+  background-size: 10px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.bookingContainer select {
+  color: #FFF;
 }

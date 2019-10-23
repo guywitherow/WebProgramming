@@ -2,7 +2,7 @@
   height: 100vh;
 }
 
-* {
+body {
   color: black;
 }
 
@@ -24,8 +24,8 @@
 }
 
 .ticketLeft {
-  height: 100px;
-  width: 100vw;
+  height: 150px;
+  width: 5000pt;
   padding-left: 10px;
   display: inline-block;
   float: left;
@@ -38,27 +38,42 @@
   margin-right: 45%;
   display: inline-block;
   margin-bottom: 10px;
+  font-size: 10pt;
+}
+
+.ticketLeft b {
+  font-weight: bold;
+  font-size: 10pt;
 }
 
 .ticketInnerRight {
   text-align: right;
   width: 40%;
-  height: 100px;
+  height: 150px;
   display: inline-block;
-  font-size: 13pt;
+  font-size: 9pt;
 }
 .ticketInnerLeft {
   text-align: left;
   width: 49%;
-  height: 100px;
+  height: 150px;
   display: inline-block;
+  font-size: 9pt;
 }
 
 .ticketMovie {
-  font-size: 10pt;
+  font-size: 9pt;
 }
 
 .ticketHeader {
   font-size: 12pt;
   text-shadow: 0px 0px #FFF;
+}
+
+.ticket .ticketGold {
+  width: 100vw;
+}
+
+footer {
+  color: #FFF;
 }

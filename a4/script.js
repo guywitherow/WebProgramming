@@ -125,11 +125,14 @@ function submitValue(title,time,day) {
   var titleField = document.getElementById("formTitle");
   var timeField = document.getElementById("formHour");
   var dayField = document.getElementById("formDay");
-
-
+  var movieIdentify = document.getElementById("movieCheck");
+  var orderButton = document.getElementById("orderButton");
   titleField.value = title;
   timeField.value = time;
   dayField.value = day;
+  title = returnTitle(title);
+  movieIdentify.innerHTML = "Booking Form <br />" + title + " <br />" + time + " " + day;
+  orderButton.disabled = false;
 
   changeDayTime();
 }
@@ -166,7 +169,7 @@ function ticketChange(type) {
       recordedTickets[5] = number;
       break;
     default:
-      console.log('AW FUCK');
+      console.log('AW DANG');
       break;
   }
 
@@ -212,7 +215,7 @@ function updatePrice() {
         discount = 11;
         break;
       default:
-        console.log('AW FUCK');
+        console.log('AW DANG');
         break;
     }
 
@@ -232,8 +235,25 @@ function updatePrice() {
   priceField.value = totalPrice.toFixed(2);
 }
 
-
-
+function returnTitle(id) {
+  switch (id) {
+    case 'ACT':
+      return "Avengers: Endgame";
+      break;
+    case 'ANM':
+      return "Dumbo";
+      break;
+    case 'AHF':
+      return "The Happy Prince";
+      break;
+    case 'RMC':
+      return "Top End Wedding";
+      break;
+    default:
+      console.log('AW DANG');
+      break;
+  }
+}
 
 
 

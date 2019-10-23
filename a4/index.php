@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Assignment 3</title>
+    <title>Assignment 4</title>
 
     <?php
-    include tools.php
+    include "tools.php";
      ?>
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
@@ -344,28 +344,29 @@
             </div>
           </div>
           <div class="bookingContainer">
-            <form method="post" action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php">
-              <input id="formTitle" name="movie[id]" type="hidden" value="ACT"  required/>
-              <input id="formDay" name="movie[day]" type="hidden" value="WED" onchange="changeDayTime()"  required />
-              <input id="formHour" name="movie[hour]" type="hidden" value="T21" onchange="changeDayTime()"  required />
+            <form method="post" action="">
+              <input id="formTitle" name="movie[id]" type="hidden" required/>
+              <input id="formDay" name="movie[day]" type="hidden" onchange="changeDayTime()"  required/>
+              <input id="formHour" name="movie[hour]" type="hidden" onchange="changeDayTime()"  required/>
               <div class="formHalf">
+                <h1 class="formHeader" id="movieCheck">Booking Form <br /> Please Select a Movie</h1>
                 <div class="stdForm">
                   <label>Standard Adults</label>
                   <select id="STA" name="seats[STA]" onchange="ticketChange('STA')">
                     <?php
-                    oneToTen();
+                    oneToTen("STA");
                     ?>
                   </select><br />
                   <label>Standard Concession</label>
                   <select id="STP" name="seats[STP]" onchange="ticketChange('STP')">
                     <?php
-                    oneToTen();
+                    oneToTen("STP");
                     ?>
                   </select><br />
                   <label>Standard Children</label>
                   <select id="STC" name="seats[STC]" onchange="ticketChange('STC')">
                     <?php
-                    oneToTen();
+                    oneToTen("STC");
                     ?>
                   </select><br />
 
@@ -374,19 +375,19 @@
                   <label>First Class Adults</label>
                   <select id="FCA" name="seats[FCA]" onchange="ticketChange('FCA')">
                     <?php
-                    oneToTen();
+                    oneToTen("FCA");
                     ?>
                   </select><br />
                   <label>First Class Concession</label>
                   <select id="FCP" name="seats[FCP]" onchange="ticketChange('FCP')">
                     <?php
-                    oneToTen();
+                    oneToTen("FCP");
                     ?>
                   </select><br />
                   <label>First Class Children</label>
                   <select id="FCC" name="seats[FCC]" onchange="ticketChange('FCC')">
                     <?php
-                    oneToTen();
+                    oneToTen("FCC");
                     ?>
                   </select><br />
                 </div>
@@ -397,22 +398,75 @@
               </div>
               <div class="detailsForm">
                 <label>Name</label>
-                <input name="cust[name]" pattern="[A-Z]{1}[a-z]{1,}\s[A-Z]{1}[a-z]{1,}" required/><br />
-                <label>Email</label>
-                <input name="cust[email]" required type="email" /><br />
-                <label>Mobile</label>
-                <input name="cust[mobile]" required  pattern="((\(04\)|04|\+614)[0-9]{8})"/><br />
-                <label>Credit Card</label>
-                <input name="cust[card]" required pattern="[0-9]{14,19}"/><br />
-                <label>Expiry</label>
-                <input name="cust[expiry]" required type="month" min="<?php echo date("Y-m-d") ?>"/>
+                <input name="cust[name]" pattern="(([A-Z]{1}[a-z]{1,}|[A-Z]{1}'{1}[A-Z]{1}[a-z]{1,})\s[A-Z]{1}[a-z]{1,})" required
+                <?php
+                if (isset($_POST['cust']['name'])) {
+                  echo "value='",$_POST['cust']['name'],"'";
+                }
+                 ?>
+                />
                 <br />
-                <input name="order" type="submit" value="Order">
+                <label>Email</label>
+                <input name="cust[email]" required type="email"
+                <?php
+                if (isset($_POST['cust']['email'])) {
+                  echo "value=",$_POST['cust']['email'];
+                }
+                 ?>
+                />
+                <br />
+                <label>Mobile</label>
+                <input name="cust[mobile]" required  pattern="(\(04\)|04|\+614)[0-9]{8}|[0-9 ]{17}"
+
+                <?php
+                if (isset($_POST['cust']['mobile'])) {
+                  echo "value=",$_POST['cust']['mobile'];
+                }
+                 ?>
+                />
+                <br />
+                <label>Credit Card</label>
+                <input name="cust[card]" required pattern="[0-9]{14,19}"
+                <?php
+                if (isset($_POST['cust']['card'])) {
+                  echo "value=",$_POST['cust']['card'];
+                }
+                 ?>
+                />
+
+                <br />
+                <label>Expiry</label>
+                <input name="cust[expiry]" required type="month" min="<?php echo date("Y-m") ?>"
+                <?php
+                if (isset($_POST['cust']['expiry'])) {
+                  echo "value=",$_POST['cust']['expiry'];
+                }
+                 ?>
+                />
+                <br />
+                <input id="orderButton" name="order" type="submit" value="Order"
+                <?php
+                if (isset($_POST['cust'])) {
+                  echo "disabled='false'";
+                }
+                else {
+                  echo "disabled='true'";
+                }
+                 ?>
+                >
+
               </div>
 
 
             </form>
           </div>
+          <br />
+          <br />
+          <?php
+          if ($error != "") {
+            echo $error;
+          }
+           ?>
         </div>
       </article>
     </main>
@@ -431,6 +485,19 @@
       <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
     </footer>
 
+
+    <?php
+    if (isset($_POST['movie'])) {}
+      echo "<script>submitValue('",$_POST['movie']['id'],"','",$_POST['movie']['hour'],"','",$_POST['movie']['day'],"');
+      ticketChange('STA');
+      ticketChange('STP');
+      ticketChange('STC');
+      ticketChange('FCA');
+      ticketChange('FCC');
+      ticketChange('FCP');
+      ",$_POST['movie']['id'],"Info();
+      </script>";
+     ?>
 
   </body>
 </html>
