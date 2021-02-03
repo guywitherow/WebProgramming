@@ -11,17 +11,17 @@
 
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
     <link id='stylecss' type="text/css" rel="stylesheet" href="css/style.css">
-    <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
+    <link id='wireframecss' type="text/css" rel="stylesheet" href="css/wireframe.css" disabled>
     <link href="https://fonts.googleapis.com/css?family=Lato|Righteous&display=swap" rel="stylesheet">
-    <script src='../wireframe.js'></script>
+    <script src='js/wireframe.js'></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body onscroll="updateNav()">
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <header class="wide100">
-      <img id="logo" src="../../media/lunardo_logo_no_text.png" alt="Logo of Lunardo Cinema">
+      <img id="logo" src="media/lunardo_logo_no_text.png" alt="Logo of Lunardo Cinema">
       <span id="title">Lunardo</span>
     </header>
 
@@ -42,12 +42,12 @@
         <div class="articlePadding">
           <div class="imageDiv">
             <div class="imageHalf">
-              <img src="../../media/standardSeat.png" class="seatImage imageCentre" alt="Image of the standard cinema seat">
+              <img src="media/standardSeat.png" class="seatImage imageCentre" alt="Image of the standard cinema seat">
               <h3>Standard Seating</h3>
               <p>The new standard seating sports luxurious cushioning, as well as adjustable armrests with cupholders!
             </div>
             <div class="imageHalf">
-              <img src="../../media/firstClassSeat.png" class="seatImage imageCentre" alt="image of the first class cinema seat">
+              <img src="media/firstClassSeat.png" class="seatImage imageCentre" alt="image of the first class cinema seat">
               <h3>First Class Seating</h3>
               <p>First Class takes comfort to a new level, with leg rests that raise, comforting you through your first class experience.
             </div>
@@ -58,7 +58,7 @@
           <h3>Revamped Sound and Visuals</h3>
           <div class="inlineContainer">
             <div class="inline inlineLeft">
-              <img id="dolbyAtmos" class="imageCentre" src="../../media/atmos.png" alt="image of the dolby atmos logo">
+              <img id="dolbyAtmos" class="imageCentre" src="media/atmos.png" alt="image of the dolby atmos logo">
             </div>
             <div class="inline inlineRight">
               <div class="factCentre">
@@ -99,7 +99,7 @@
           </div>
           <div class="inlineContainer dolbyBorder">
             <div class="inline inlineLeft">
-              <img id="dolbyAtmos" class="imageCentre" src="../../media/vision.png" alt="image of the dolby vision logo">
+              <img id="dolbyAtmos" class="imageCentre" src="media/vision.png" alt="image of the dolby vision logo">
             </div>
             <div class="inline inlineRight">
               <div class="factCentre">
@@ -239,7 +239,7 @@
           <div class="posterContainer">
             <div class="avengers postCard">
               <div class="posterDiv">
-                <img class="poster" src="../../media/avengers.png" alt="Avengers endgame poster">
+                <img class="poster" src="media/avengers.png" alt="Avengers endgame poster">
                 <button class="detailsButton" onclick="ACTInfo()">More info</button>
               </div>
               <div class="posterText">
@@ -259,7 +259,7 @@
             </div>
             <div class="tEW postCard">
               <div class="posterDiv">
-                <img class="poster" src="../../media/topEndWedding.png" alt="top end wedding poster">
+                <img class="poster" src="media/topEndWedding.png" alt="top end wedding poster">
                 <button class="detailsButton" onclick="RMCInfo()">More info</button>
               </div>
               <div class="posterText">
@@ -278,7 +278,7 @@
             </div>
             <div class="dumbo postCard">
               <div class="posterDiv">
-                <img class="poster" src="../../media/dumbo.png" alt="dumbo poster">
+                <img class="poster" src="media/dumbo.png" alt="dumbo poster">
                 <button class="detailsButton" onclick="ANMInfo()">More info</button>
               </div>
               <div class="posterText">
@@ -300,7 +300,7 @@
             </div>
             <div class="tHP postCard">
               <div class="posterDiv">
-                <img class="poster" src="../../media/theHappyPrince.png" alt="the happy prince poster">
+                <img class="poster" src="media/theHappyPrince.png" alt="the happy prince poster">
                 <button class="detailsButton" onclick="AHFInfo()">More info</button>
               </div>
               <div class="posterText">

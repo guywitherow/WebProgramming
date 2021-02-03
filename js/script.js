@@ -32,21 +32,12 @@ function updateStyle(active) {
   var items = menu.getElementsByClassName("navItem");
 
   for (i = 0; i < items.length; i++) {
+    items[i].className = "navItem"
     if (i == items.length - 1) {
-      if (i == active) {
-        items[i].className = "navItem active last"
-      }
-      else {
-        items[i].className = "navItem last"
-      }
+      items[i].className += " last"
     }
-    else {
-      if (i == active) {
-        items[i].className = "navItem active"
-      }
-      else {
-        items[i].className = "navItem"
-      }
+    if (i == active) {
+      items[i].className += " active"
     }
   }
 }
@@ -148,30 +139,18 @@ function ticketChange(type) {
   var price = 0;
   var discount = 0;
   var oldTickets = 0;
+  var item = 0;
 
-  switch (type) {
-    case 'FCA':
-      recordedTickets[0] = number;
-      break;
-    case 'FCP':
-      recordedTickets[1] = number;
-      break;
-    case 'FCC':
-      recordedTickets[2] = number;
-      break;
-    case 'STA':
-      recordedTickets[3] = number;
-      break;
-    case 'STP':
-      recordedTickets[4] = number;
-      break;
-    case 'STC':
-      recordedTickets[5] = number;
-      break;
-    default:
-      console.log('AW DANG');
-      break;
+  var typeDict = {
+    'FCA': 0,
+    'FCP': 1,
+    'FCC': 2,
+    'STA': 3,
+    'STP': 4,
+    'STC': 5
   }
+
+  recordedTickets[typeDict[type]] = number;
 
   updatePrice();
 
@@ -188,36 +167,13 @@ function updatePrice() {
   var price = 0;
   var discount = 0;
   totalPrice = 0;
+
+  var priceArray = [30,27,24,19.8,17.5,15.3];
+  var discountArray = [24,22.5,21,14,12.5,11];
+
   for (var i = 0; i < recordedTickets.length; i++) {
-    switch (i) {
-      case 0:
-        price = 30;
-        discount = 24;
-        break;
-      case 1:
-        price = 27;
-        discount = 22.5;
-        break;
-      case 2:
-        price = 24;
-        discount = 21;
-        break;
-      case 3:
-        price = 19.80;
-        discount = 14;
-        break;
-      case 4:
-        price = 17.5;
-        discount = 12.5;
-        break;
-      case 5:
-        price = 15.30;
-        discount = 11;
-        break;
-      default:
-        console.log('AW DANG');
-        break;
-    }
+    price = priceArray[i];
+    discount = discountArray[i];
 
     var discountDays = ['MON','WED'];
     var midday = ['TUE','THU','FRI'];
@@ -254,7 +210,3 @@ function returnTitle(id) {
       break;
   }
 }
-
-
-
-
