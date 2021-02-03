@@ -1,3 +1,3 @@
 # WebProgramming
 
-PHP/JS Movie Theatre Website with booking functionality, basic form operation and error checking.
+PHP Movie Theatre website with basic listings of upcoming movies with some nice functionality.
